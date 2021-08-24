@@ -8,8 +8,8 @@ The input to the program will specify scheduler parameters such as the time slic
 The program accepts three arguments on the command line:
 
 1. The input file name
-2. block_duration: the decimal integer time length that a process is unavailable to run after it blocks
-3. time_slice: the decimal integer length of the time slice for the Round-Robin scheduler 
+2. `block_duration`: the decimal integer time length that a process is unavailable to run after it blocks
+3. `time_slice`: the decimal integer length of the time slice for the Round-Robin scheduler 
 
 ## Input format
 The input file, specified as the first command line argument, contains the list of processes to schedule.
@@ -28,11 +28,11 @@ name priority arrival_time total_time block_interval
 - `block_interval` is the interval at which the process will block for I/O. When a process blocks, it is unavailable to run for the time specified by the command line argument block_duration.
 
 ## Output Format
-All output should be written to standard output. A set of lines should be written consisting of:
+All output is written to standard output. A set of lines is written consisting of:
 
-- A single line containing the `block_duration` and `time_slice` as specified on the command line. Values should be separated by spaces.
-- One line for each interval during which a process is running or the system is idle. The line should consist of a single space, followed by the current simulation time (starting at 0), followed by the process `name` (or "(IDLE)" if no process is running), the length of the interval, and a status code indicating why the interval ended: "B" for blocked, "S" for time slice ended, "T" if the process terminated, or "I" for an idle interval. The fields should be separated by the tab character, '\t'.
-- After all jobs have terminated, write a line consisting of a single space, the simulation time at which the last job terminated, a tab character, the string "(END)", another tab character, and the average turnaround time of all processes (floating point value).
+- A single line containing the `block_duration` and `time_slice` as specified on the command line. Values are separated by spaces.
+- One line for each interval during which a process is running or the system is idle. The line consists of a single space, followed by the current simulation time (starting at 0), followed by the process `name` (or "(IDLE)" if no process is running), the length of the interval, and a status code indicating why the interval ended: `B` for blocked, `S` for time slice ended, `T` if the process terminated, or `I` for an idle interval. The fields are separated by the tab character, '\t'.
+- After all jobs have terminated, a line is written consisting of a single space, the simulation time at which the last job terminated, a tab character, the string "(END)", another tab character, and the average turnaround time of all processes (floating point value).
 
 ## Sample Input and Output
 Sample input and output files are supplied in **inputData**. The two .txt files are input (use only one input file for any execution of the program). Corresponding sample output files are given for different combinations of `block_duration` and `time_slice`.
