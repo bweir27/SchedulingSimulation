@@ -38,7 +38,7 @@ Process::Process(string name, uint32_t priority, uint32_t arrival_time, uint32_t
 /**
  * print    -   used mostly for debugging, prints the data points for this process
  */
-void Process::print(){
+void Process::print() const{
     cout<<"("<< this->p_name << " "
         << this->priority << " "
         << this->arrival_time << " "

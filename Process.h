@@ -11,10 +11,10 @@
 #include <ios>
 #include <fstream>
 #include <sstream>
-#include <stdio.h>
+#include <cstdio>
 #include <string>
-#include <string.h>
-#include <stdlib.h>
+#include <cstring>
+#include <cstdlib>
 #include <map>
 #include <iterator>
 #include <iomanip>
@@ -57,7 +57,7 @@ public:
 
 //    friend bool operator< (const Process& p1, const Process& p2);
 
-    void print();
+    void print() const;
 
 private:
 

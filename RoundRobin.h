@@ -9,17 +9,17 @@
 
 class RoundRobin {
 
-    std::string file_name;  //the name of the input file
+    string file_name;  //the name of the input file
     uint32_t block_duration;    // the time each process blocks before it can execute again
     uint32_t time_slice;    // the time allotted to each process by the Scheduler before it is forced to block
 
     uint32_t maxPriority; //to be used to determine the number of qTable indices needed
-    std::vector<Process> allProcesses; //the list of ALL processes
+    vector<Process> allProcesses; //the list of ALL processes
 
-    std::vector<std::vector<Process>> qTable; //the queue table
-    std::vector<Process> blockedProcesses; //the list of processes that are currently blocked
-    std::vector<Process> unarrived_processes; //the list of processes that haven't arrived yet (according to the clock)
-    std::vector<Process> finished_processes; //the list of processes that have completed execution
+    vector<std::vector<Process>> qTable; //the queue table
+    vector<Process> blockedProcesses; //the list of processes that are currently blocked
+    vector<Process> unarrived_processes; //the list of processes that haven't arrived yet (according to the clock)
+    vector<Process> finished_processes; //the list of processes that have completed execution
     uint32_t numTotalProcesses; // the total number of processes that need to be performed
 
     uint32_t clock; //used to maintain the clock in the program
